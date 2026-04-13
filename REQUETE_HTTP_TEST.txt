@@ -1,0 +1,212 @@
+### Récupère les photos du client 1
+GET localhost:8080/api/clients/1/images/1/photos
+
+
+### Récupère les photos du client 2
+GET localhost:8080/api/clients/2/images/1/photos
+
+
+###
+POST http://localhost:8080/api/clients/1/images/1/photos
+Content-Type: application/json
+
+{
+  "parametres": "Cette photo à ajouter sert de test",
+  "imageSource":
+  {
+    "id": 1
+  }
+}
+
+### Récupère les photos du client 1
+GET localhost:8080/api/clients/1/images/1/photos
+
+
+### Récupère tous les calendriers du client 1
+GET http://localhost:8080/api/clients/1/impressions/calendriers
+
+
+### Crée un calendrier pour le client 1
+POST http://localhost:8080/api/clients/1/impressions/calendriers
+Content-Type: application/json
+
+{
+  "format": "PETIT",
+  "qualite": "BONNE"
+}
+
+### Récupère tous les albums du client 1
+GET http://localhost:8080/api/clients/1/impressions/albums
+
+### Crée un album pour le client 1
+POST http://localhost:8080/api/clients/1/impressions/albums
+Content-Type: application/json
+
+{
+  "titre": "Martine à la plage",
+  "format": "PETIT",
+  "qualite": "BONNE"
+}
+
+
+### Récupère tous les tirages du client 1
+GET http://localhost:8080/api/clients/1/impressions/tirages
+
+
+
+
+### Crée un tirage pour le client 1
+POST http://localhost:8080/api/clients/1/impressions/tirages
+Content-Type: application/json
+
+{
+  "format": "PETIT",
+  "qualite": "BONNE"
+}
+
+
+### Récupère tous les cardres du client 1
+GET http://localhost:8080/api/clients/1/impressions/cadres
+
+
+### Crée un cadre pour le client 1
+POST http://localhost:8080/api/clients/1/impressions/cadres
+Content-Type: application/json
+
+{
+  "taille": "10X4",
+  "format": "PETIT",
+  "qualite": "BONNE"
+}
+
+###
+POST http://localhost:8080/api/clients/1/impressions/calendriers/52/pages
+Content-Type: application/json
+
+{
+  "numero": 7,
+  "description": "Test pour voir si on peut bien update la description et ajouter une photo",
+  "photos": [
+  {
+    "id": 1,
+    "parametres": "fzaff",
+    "imageSource":
+    {
+      "id": 1
+    }
+  }
+  ]
+}
+
+<> 2023-04-03T160718.201.json
+<> 2023-04-03T160655.201.json
+<> 2023-04-03T160419.201.json
+<> 2023-04-03T160008.500.json
+<> 2023-04-03T155833.500.json
+<> 2023-04-03T155734.201.json
+<> 2023-04-03T144909.201.json
+<> 2023-04-03T144829.201.json
+<> 2023-04-03T144138.500.json
+<> 2023-04-03T144054.201.json
+<> 2023-04-03T143803.500.json
+<> 2023-04-03T143452.500.json
+<> 2023-04-03T142922.500.json
+<> 2023-04-03T142705.500.json
+<> 2023-04-03T142421.500.json
+<> 2023-04-03T142221.500.json
+<> 2023-04-03T142113.500.json
+<> 2023-04-03T142105.500.json
+<> 2023-04-03T141643.400.json
+<> 2023-04-03T141446.400.json
+<> 2023-04-03T141319.400.json
+<> 2023-04-03T134552.500.json
+<> 2023-04-02T205430.500.json
+<> 2023-04-02T204030.201.json
+<> 2023-04-02T203551.500.json
+<> 2023-04-02T203431.500.json
+<> 2023-04-02T203116.500.json
+<> 2023-04-02T202458.201.json
+<> 2023-04-02T202328.500.json
+
+
+
+
+###OK tous les albums d'un client
+GET http://localhost:8080/api/clients/1/impressions/albums
+
+<> 2023-04-03T161003.500.json
+<> 2023-04-03T160309.500.json
+<> 2023-04-03T160235.500.json
+<> 2023-04-03T160149.500.json
+<> 2023-04-03T160121.500.json
+<> 2023-04-03T160111.500.json
+<> 2023-04-03T154018.500.json
+<> 2023-04-03T152438-2.500.json
+
+###NOK tous les albums d'un client notFound
+GET http://localhost:8080/api/clients/94/impressions/albums
+
+<> 2023-04-03T161001.404.json
+<> 2023-04-03T160142.404.json
+<> 2023-04-03T154018.404.json
+<> 2023-04-03T152439.404.json
+
+###OK tous les cadres d'un cient
+GET http://localhost:8080/api/clients/1/impressions/cadres
+
+<> 2023-04-03T160154.200.json
+<> 2023-04-03T154018.200.json
+<> 2023-04-03T152439.200.json
+
+###NOK tous les cadres d'un cient notFound
+GET http://localhost:8080/api/clients/97/impressions/cadres
+
+<> 2023-04-03T160159.404.json
+<> 2023-04-03T154018-1.404.json
+<> 2023-04-03T153929.404.json
+<> 2023-04-03T152439-1.404.json
+
+###OK tous les calendriers d'un client
+GET http://localhost:8080/api/clients/1/impressions/calendriers
+
+<> 2023-04-03T160203.200.json
+<> 2023-04-03T154018-1.200.json
+<> 2023-04-03T153929-1.200.json
+<> 2023-04-03T152439-1.200.json
+
+###NOK tous les calendriers d'un client notFound
+GET http://localhost:8080/api/clients/95/impressions/calendriers
+
+<> 2023-04-03T160207.404.json
+<> 2023-04-03T154018-2.404.json
+<> 2023-04-03T153929-1.404.json
+###OK tous les tirages d'un client
+GET http://localhost:8080/api/clients/1/impressions/tirages
+
+<> 2023-04-03T160211.200.json
+<> 2023-04-03T154019.200.json
+<> 2023-04-03T153929-2.200.json
+<> 2023-04-03T152439-2.200.json
+
+###NOK tous les tirages d'un client notFound
+GET http://localhost:8080/api/clients/92/impressions/tirages
+
+<> 2023-04-03T160227.404.json
+<> 2023-04-03T154019.404.json
+<> 2023-04-03T153929-2.404.json
+<> 2023-04-03T152439-3.404.json
+
+###NOK image notFound
+DELETE http://localhost:8080/api/clients/1/images/3
+
+<> 2023-04-03T160357.404.json
+<> 2023-04-03T160350.404.json
+
+###NOK client notFound
+DELETE http://localhost:8080/api/clients/10/images/1
+
+<> 2023-04-03T160436.404.json
+
+
+###OK delete image
+DELETE http://localhost:8080/api/clients/1/images/5
